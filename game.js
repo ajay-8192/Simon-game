@@ -106,8 +106,8 @@ function startOver() {
         localStorage.setItem("previous-score", level-1);
     }
     $("#ps").text("Previous Score: " + localStorage.getItem("previous-score"));
-    if (level > localStorage.getItem("high-score")+1) {
-        localStorage.setItem("high-score", level-1)
+    if (localStorage.getItem("previous-score") > localStorage.getItem("high-score")+1) {
+        localStorage.setItem("high-score", localStorage.getItem("previous-score"))
     }
     $("#hs").text("High Score: " + localStorage.getItem("high-score"));
     level = 0;
