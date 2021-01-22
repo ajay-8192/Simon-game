@@ -16,6 +16,14 @@ if (!localStorage.getItem("high-score")){
 }
 $("#hs").text("High Score: " + localStorage.getItem("high-score"));
 
+$("#start").click(function() {
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+    }
+});
+
 $(document).keypress(function() {
     if (!started) {
         $("#level-title").text("Level " + level);
