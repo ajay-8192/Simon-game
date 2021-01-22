@@ -6,10 +6,10 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-// if (!localStorage.getItem("previous-score")){
-//     localStorage.setItem("previous-score", 0)
-// }
-// $("#ps").text("Previous Score: " + localStorage.getItem("previous-score"));
+if (!localStorage.getItem("previous-score")){
+    localStorage.setItem("previous-score", 0)
+}
+$("#ps").text("Previous Score: " + localStorage.getItem("previous-score"));
 
 if (!localStorage.getItem("high-score")){
     localStorage.setItem("high-score", 0)
@@ -94,14 +94,14 @@ function animatePress(currentColor) {
 }
 
 function startOver() {
-//     if (level > 0) {
-//         localStorage.setItem("previous-score", level-1);
-//         $("#ps").text("Previous Score: " + localStorage.getItem("previous-score"));
-//     }
+    if (level > 0) {
+        localStorage.setItem("previous-score", level-1);
+    }
+    $("#ps").text("Previous Score: " + localStorage.getItem("previous-score"));
     if (level > localStorage.getItem("high-score")+1) {
         localStorage.setItem("high-score", level-1)
-        $("#hs").text("High Score: " + localStorage.getItem("high-score"));
     }
+    $("#hs").text("High Score: " + localStorage.getItem("high-score"));
     level = 0;
     gamePattern = [];
     started = false;
