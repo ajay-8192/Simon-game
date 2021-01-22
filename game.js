@@ -6,12 +6,6 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-if (!localStorage.getItem("high-score")){
-    localStorage.setItem("high-score", 0)
-} else {
-    $("#hs").text("High Score: " + localStorage.getItem("high-score"));
-}
-
 if (!localStorage.getItem("previous-score")){
     localStorage.setItem("previous-score", 0)
 } else {
@@ -99,8 +93,6 @@ function startOver() {
     if (level > 0)
         localStorage.setItem("previous-score", level-1);
         $("#ps").text("Previous Score: " + localStorage.getItem("previous-score"));
-    if(localStorage.getItem("high-score") <= level)
-        localStorage.setItem("high-score", level);
     level = 0;
     gamePattern = [];
     started = false;
