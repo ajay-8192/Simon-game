@@ -100,6 +100,7 @@ function startOver() {
     }
     if (level > localStorage.getItem("high-score")) {
         localStorage.setItem("high-score", level-1)
+        $("#hs").text("High Score: " + localStorage.getItem("high-score"));
     }
     level = 0;
     gamePattern = [];
