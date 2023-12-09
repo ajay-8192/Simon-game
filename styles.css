@@ -22,7 +22,7 @@ h3 {
 }
 
 .container {
-    display: block;
+    display: flex;
     width: 70%;
     margin: auto;
 }
