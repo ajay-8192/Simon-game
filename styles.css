@@ -4,7 +4,7 @@ body {
 }
 
 h3 {
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 1.1rem;
     font-family: monospace;
@@ -14,7 +14,7 @@ h3 {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.5rem;
     margin: 5%;
-    color: #FEF2BF;
+    color: black;
 }
 
 .score {
