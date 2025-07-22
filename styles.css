@@ -3,7 +3,7 @@ body {
     background-color: white;
 }
 
-h3 {
+h2, h3 {
     color: black;
     font-weight: bold;
     font-size: 1.1rem;
